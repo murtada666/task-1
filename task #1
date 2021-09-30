@@ -1,0 +1,26 @@
+const  numbers = [5,8,0,1,9,11,15,16]; //the Original array.
+//notice that numbers are immutable.
+ 
+
+console.log("Original numbers list: ", numbers)
+
+for(let i = 0 ; i < numbers.length-1 ; i++)
+{
+        if(numbers[i] > numbers[i + 1])
+        {
+            [numbers[i],numbers[i + 1]]=[numbers[i + 1],numbers[i]]//swapping process.
+            i=i-2;
+        }
+}
+
+console.log("Numbers list After ASC sorting: ", numbers)
+
+for(i = 0 ; i < numbers.length-1 ; i++)
+
+        if(numbers[i] < numbers[i + 1])
+        {
+            [numbers[i],numbers[i + 1]]=[numbers[i + 1],numbers[i]]//swapping process.
+            i=i-2;
+        }
+
+console.log("Numbers list After Desc sorting: ", numbers)
